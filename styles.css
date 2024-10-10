@@ -1,0 +1,71 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 2em;
+}
+
+/* Pseudo-Éléments */
+.before-after::before {
+    content: "Before ... ";
+    color: #ff6347;
+}
+
+.before-after::after {
+    content: " ... After";
+    color: #3498db;
+}
+
+.first-letter::first-letter {
+    font-size: 2em;
+    color: #3498db;
+}
+
+.first-line::first-line {
+    font-weight: bold;
+    color: #2ecc71;
+}
+
+.marker {
+    color: #ff6347;
+}
+
+.selection {
+    background-color: #3498db;
+    color: rgb(255, 255, 255);
+}
+
+/* Pseudo-Classes */
+a {
+    text-decoration: none;
+}
+
+.hover:hover {
+    color: #e74c3c;
+    text-decoration: underline;
+}
+
+.active:active {
+    animation: rainbow 1s infinite;
+}
+
+@keyframes rainbow {
+    0% { color: red; }
+    16.6% { color: orange; }
+    33.3% { color: yellow; }
+    50% { color: green; }
+    66.6% { color: blue; }
+    83.3% { color: indigo; }
+    100% { color: violet; }
+}
+
+p:first-child {
+    color: #e74c3c;
+}
+
+p:nth-child(2) {
+    color: #3498db;
+}
+
+p:last-child {
+    color: #2ecc71;
+}

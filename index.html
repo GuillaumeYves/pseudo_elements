@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Démo des Pseudo-Classes et Pseudo-Éléments CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Démo des Pseudo-Classes et Pseudo-Éléments CSS</h1>
+
+    <!-- Démo des Pseudo-Éléments -->
+    <section>
+        <h2 style="text-decoration: underline; margin-top: 2em;">Pseudo-Éléments</h2>
+        
+        <h4 class="before-after">::before & ::after</h4>
+        <h4 class="first-letter">La première lettre est stylisée avec ::first-letter</h4>
+        <h4 class="first-line">La ligne est stylisée avec ::first-line<br>
+            Mais pas celle ci car elle n'est pas la première ligne</h4>
+            
+        <ul>
+            <li class="marker">Élément de liste avec un style <strong>::marker</strong></li>
+            <li>Un autre élément de liste mais sans <strong>::marker</strong></li>
+        </ul>
+
+        <h4><span class="selection">Cette partie est stylisée par ::selection</span>, la suite ne l'est pas</h4>
+    </section>
+
+    <!-- Démo des Pseudo-Classes -->
+    <section>
+        <h2 style="text-decoration: underline; margin-top: 2em;">Pseudo-Classes</h2>
+
+        <h3>- Formulaires</h3>
+
+        <form>
+            <label>
+                <h4>Cliquez sur l'un ou l'autre pour activer :checked</h4>
+                <input type="radio" name="radio" checked> Champ sélectionné (:checked)<br>
+                <input type="radio" name="radio"> Par défaut (sans :checked)
+            </label>
+        </form>
+        
+        <form>
+            <h4>Un champ est désactivé avec :disabled</h4>
+            <label>
+                <input type="text" value="Votre texte"><br>
+                <input type="text" value="Essayer d'écrire ici" disabled>
+            </label>
+        </form>
+        
+        <form>
+            <h4>Un champ est :required, essayez de valider sans le remplir</h4>
+            <label>
+                <input type="text" value="Votre texte"><br>
+                <input type="text" required placeholder="Ce champ est requis">
+            </label><br>
+            <button type="submit">Valider</button>
+        </form>
+    
+        <h3>- Liens</h3>
+        <a href="https://google.com" class="link">Ne pas cliquer - lien non visité (:link)</a><br>
+        <a href="https://soundcloud.com" class="visited">Ouvrir dans un nouvel onglet pour voir le changement (:visited)</a><br>
+        <a href="https://youtube.com" class="hover">Survoler ce lien pour voir l'effet (:hover)</a><br>
+        <a href="https://github.com" class="active">Cliquer et maintenir le clic (:active)</a>
+
+        <h3>- Ordre</h3>
+        <div>
+            Dans cette phrase :
+            <p>Je suis le premier (:first-child)</p>
+            <p>Je suis le deuxième (:nth-child(2))</p>
+            <p>Je suis le dernier (:last-child)</p>
+        </div>
+    </section>
+
+</body>
+</html>
